@@ -1,6 +1,6 @@
-import { Brand } from '../Brand/Brand';
-import { Menu } from '../Menu/Menu';
-import { CartWidget } from '../CartWidget/CartWidget';
+import { Brand } from './Brand/Brand';
+import { Menu } from './Menu/Menu';
+import { CartWidget } from './CartWidget/CartWidget';
 import './NavBar.css';
 
 export const NavBar = ()=>{
