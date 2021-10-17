@@ -4,7 +4,6 @@
     border: none;
     width: 3rem;
     height: 3rem;
-    margin-top: 1rem;
 }
 
 .cart img {
@@ -15,5 +14,5 @@
 
 .cart:hover {
     border-radius: 50%;
-    background-color: #E4E0D5;
+    background-color: #e1cc92;
 }

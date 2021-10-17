@@ -1,0 +1,38 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);;
+
+.counterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12.5rem;
+    height: 2.1875rem;
+    border: thin solid black;
+    border-radius: .3125rem;
+    padding: .3125rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.counterButton {
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.cartButton {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.cartButton img {
+    height: 75%;
+    width:75%;
+}
+
+.cartButton:hover {
+    border-radius: 50%;
+    background-color:#e1cc92;
+}

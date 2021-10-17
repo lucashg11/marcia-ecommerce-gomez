@@ -1,9 +1,12 @@
-import '../ItemListContainer/ItemListContainer.css'
 
-export const ItemListContainer = ({ greeting })=>{
+import '../ItemListContainer/ItemListContainer.css'
+import { ItemCount } from './itemCount/ItemCount';
+
+export const ItemListContainer = ()=>{
+    
     return (
-        <div className="itemlist">
-            <h1>{ greeting }</h1>
+        <div className="itemlistContainer">
+            <ItemCount />
         </div>
     )
 }

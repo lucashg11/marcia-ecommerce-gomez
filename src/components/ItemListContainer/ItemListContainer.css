@@ -1,8 +1,10 @@
-.itemlist {
-    position: relative;
+.itemlistContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #282c34;
+    background-color: #E4E0D5;
 }
 
 .itemlist h1 {
