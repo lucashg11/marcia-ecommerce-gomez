@@ -1,5 +1,5 @@
-import MainLogo from '../BrandLogo/MarciaLogo.svg';
-import '../BrandLogo/BrandLogo.css';
+import MainLogo from '../assets/images/MarciaLogo.svg';
+import './Components.css';
 
 export const BrandLogo = ()=> {
     return (

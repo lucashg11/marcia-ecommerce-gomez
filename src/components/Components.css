@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 5rem;
+    background-color: #FFF;
+    line-height: 4rem;
+    
+}
+
+.menu {
+    display: flex;
+    align-content: center;
+    margin-right: 6.25rem;
+}
+
+.menu button {
+    padding: 16px;
+    border-radius: .625rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu button:hover {
+    background-color: #e1cc92;
+    font-weight: 600;
+}
+
+.cart {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+}
+
+.cart img {
+    width: 65%;
+    height: 65%;
+    color: #0000;
+}
+
+.cart:hover {
+    border-radius: 50%;
+    background-color: #e1cc92;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.logo {
+    width: 4.6875rem;
+    height: 4.6875rem;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.itemlist h1 {
+    color:#E4E0D5;
+}
+
+.counterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12.5rem;
+    height: 2.1875rem;
+    border: thin solid black;
+    border-radius: .3125rem;
+    padding: .3125rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#FFF ;
+}
+
+.counterButton {
+    cursor: pointer;
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.cartButton {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.cartButton img {
+    height: 75%;
+    width:75%;
+}
+
+.cartButton:hover {
+    border-radius: 50%;
+    background-color:#e1cc92;
+}

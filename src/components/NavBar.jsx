@@ -1,7 +1,7 @@
-import { Brand } from './Brand/Brand';
-import { Menu } from './Menu/Menu';
-import { CartWidget } from './CartWidget/CartWidget';
-import './NavBar.css';
+import { Brand } from './Brand';
+import { Menu } from './Menu';
+import { CartWidget } from './CartWidget';
+import './Components.css';
 
 export const NavBar = ()=>{
     return (

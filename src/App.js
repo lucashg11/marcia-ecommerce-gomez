@@ -1,11 +1,11 @@
-import { NavBar } from './components/NavBar/NavBar';
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { NavBar } from './components/NavBar.jsx';
+import { ItemListContainer } from './containers/ItemListContainer.jsx';
 
 function App() {
   return (
     <div>
       <NavBar/>
-      <ItemListContainer greeting="Contenido Proximamente"/>
+      <ItemListContainer />
     </div>
   );
 }
