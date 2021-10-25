@@ -114,3 +114,16 @@
     border-radius: 50%;
     background-color:#e1cc92;
 }
+
+.itemlist{
+    border: solid thin black;
+}
+
+.itemList h3{
+    color: red;
+}
+
+.itemImg{
+    width: 200px;
+    height: 200px;
+}
