@@ -11,7 +11,7 @@ export const ItemCount = ({count, stock, onAdd, onRemove})=> {
                 <button className="counterButton" onClick={onRemove}> - </button>
                 <p stock={stock}>{count}</p>
                 <button className="counterButton" onClick={onAdd}> + </button>
-                <button className="cartButton"><img src={CartLogo}alt="" /></button>
+                <button className="cartButton"><img src={CartLogo}alt="" />Agregar al carrito</button>
             </div>
 
         </>
