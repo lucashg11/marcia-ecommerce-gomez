@@ -1,5 +1,4 @@
 import './ItemListContainer.css'
-import { Products } from '../components/Item'; 
 import { ItemList } from '../components/ItemList';
 import { useState, useEffect } from 'react';
 
@@ -7,10 +6,10 @@ import { useState, useEffect } from 'react';
 export const ItemListContainer = ()=>{
     const [productList, setProductList] = useState([]);
     useEffect(()=>{
-        fetch({Products})
-        .then((res)=>res.json)
+    fetch("Item.json")
+        .then((res)=>res.json())
         .then(data => {
-            setProductList(data.results)
+            setProductList(data)
         })
     }, [productList]);
     
@@ -19,7 +18,7 @@ export const ItemListContainer = ()=>{
    return (
        <div className="itemlistContainer">
            {productList?.map((product)=>{return(
-                    <ItemList key={product.picture} item = { product } />
+                    <ItemList  item = { product } />
                     )
                 }
             )
