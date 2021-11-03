@@ -84,9 +84,11 @@
     border-radius: .3125rem;
     font-family: 'Montserrat', sans-serif;
     background-color:#FFF ;
+    margin-top: 24px;
 }
 
 .counterButton {
+    margin: 0 10px;
     cursor: pointer;
     border: none;
     font-size: 1.5rem;
@@ -107,7 +109,9 @@
     color: rgba(0, 0, 0, .5);
     font-size: 14px;
     font-weight: 600;
+    margin-top: 10px;
 }
+
 
 .cartButton img {
     height:80%;
@@ -116,29 +120,52 @@
 }
 
 .cartButton:hover{
-    transform: scale(1.05);
-    transition: transform  .08s ease ;
+    background-color: aqua;
+    transition: background-color  .09s ease-in ;
 
 }
 
 .itemList{
+    align-items: center;
+    justify-content: center;
     height:400px;
-    margin-left: 10px;
+    width: 200px;
+    margin: 24px 65px;
 }
 
+
 .itemList h3{
-    text-align: center;
+    margin-bottom: 24px; 
     font-family: "Montserrat", sans-serif;
     font-weight: normal ;
 }
 
 .itemList p {
     font-family: "Montserrat", sans-serif;
-    text-align: center;
 }
 
 .itemImg{
-
+    margin-bottom: 24px;
+    cursor: pointer;
+    border-radius: 10%;
     width: 200px;
     height: 200px;
+}
+.itemImg:hover {
+    transform: scale(1.1);
+    transition: transform .08s ease-in;
+}
+
+.itemDetailImg {
+    border: thin solid red;
+    width: 400px;
+    height: 400px;
+}
+
+.itemDetailInfo {
+    padding: 0 50px;
+}
+
+.itemDetailInfo h1{
+    margin-bottom: 10px;
 }

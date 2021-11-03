@@ -1,8 +1,9 @@
+import './Components.css';
 import '../containers/Container.css';
+import {ItemCount} from './ItemCount';
 import { useState } from 'react';
-import { ItemCount } from './ItemCount';
 
-export const ItemList = ({ item })=> {
+export const ItemDetail = ({item})=>{
     const [count, setCount] = useState(1);
     const upCount = ()=> {
         if(count === item.stock){
@@ -19,11 +20,14 @@ export const ItemList = ({ item })=> {
         }
     };
     return (
-        <div className="itemList">
-            <img src={ item.picture } alt="" className="itemImg"/>
-            <h3>{ item.title } </h3>
-            <p><span>{item.currency}</span>{ item.price }</p>
-            <ItemCount onAdd={upCount} onRemove={downCount} count={count}/>
+        <div className="itemDetailContainer">
+            <img src={item.picture} alt="Imagen del producto" className="itemDetailImg"/>
+            <div className="itemDetailInfo">
+                <h1>{item.title}</h1>
+                <h4>{item.description}</h4>
+                <p>{item.price}</p>
+                <ItemCount onAdd={upCount} onRemove={downCount} count={count}/>
+            </div>
         </div>
     )
 }
