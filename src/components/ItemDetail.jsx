@@ -19,9 +19,9 @@ export const ItemDetail = ({item})=>{
             setCount(count-1)
         }
     };
-    return (
+       return (
         <div className="itemDetailContainer">
-            <img src={item.picture} alt="Imagen del producto" className="itemDetailImg"/>
+            <img src={item.picture} alt="" className="itemDetailImg"/>
             <div className="itemDetailInfo">
                 <h1>{item.title}</h1>
                 <h4>{item.description}</h4>

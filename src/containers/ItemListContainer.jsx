@@ -9,14 +9,13 @@ export const ItemListContainer = ()=>{
     fetch("Item.json")
         .then((res)=>res.json())
         .then(data => {
-            setProductList(data)
-        })
+            setProductList(data);
+        });
     }, [productList]);
     
 
-
    return (
-       <div className="itemlistContainer">
+       <div className= "itemlistContainer" >
            {productList?.map((product)=>{return(
                     <ItemList  item = { product } />
                     )
