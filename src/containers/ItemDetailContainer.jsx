@@ -16,9 +16,9 @@ export const ItemDetailContainer = ()=>{
 
    return (
        <div className="itemDetailContainer">
-           {productDetail?.filter((items)=>items.id===1)
-           .map((items, id)=>(
-               <ItemDetail item={items} key={id}/>
+           {productDetail?.filter((product)=>product.id===1)
+           .map((product, id)=>(
+               <ItemDetail item={product} key={id}/>
            ))}
        </div>
     )
