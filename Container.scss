@@ -1,0 +1,30 @@
+
+.mainContainer {
+    width: 100%;
+    height: 100%;
+    padding: 0 200px;
+}
+
+
+.card__wrapper {
+    margin: 2rem;
+    display: grid;
+    gap:1rem;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+
+.itemDetailContainer {
+    border: thin solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+}
+
+@media screen and (min-width:600px){
+    .card__wrapper{
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+    }
+}
