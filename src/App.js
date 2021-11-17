@@ -1,36 +1,26 @@
-import { useState } from 'react';
-
-import './App.css';
-import './containers/Container.css';
+import './App.scss';
+import './containers/Container.scss';
 import { NavBar } from './components/NavBar.jsx';
 import { ItemListContainer } from './containers/ItemListContainer.jsx';
 import { ItemDetailContainer } from './containers/ItemDetailContainer';
+import { BrowserRouter, Route, Switch  } from 'react-router-dom';
+
 
 function App() {
-  const [flag, setFlag] = useState(false);
-  const [id, setId] = useState(null);
-  
-  const changeFlag = ()=>{
-    setFlag(!flag);
-  }
-
-  const setNewId= (i)=>{
-    setId(i)
-  }
-
   return (
-    <div>
+    <BrowserRouter>
       <NavBar/>
       <div className="mainContainer">
-        <>{
-          flag ?
-          <ItemListContainer changeFlag={changeFlag} setNewId={setNewId}/>
-          :
-          <ItemDetailContainer id={id}/>
-        }
-        </>
+        <Switch>
+          <Route exact path="/">
+            <ItemListContainer/>
+          </Route>
+          <Route exact path="/item/:id">
+            <ItemDetailContainer/>
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

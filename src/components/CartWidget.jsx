@@ -1,5 +1,5 @@
 import  CartLogo  from '../assets/images/CartLogo.svg';
-import './Components.css';
+import './Components.scss';
 
 export const CartWidget = ()=> {
     return (

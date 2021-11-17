@@ -1,7 +1,7 @@
 import { BrandLogo } from './BrandLogo';
 import { BrandName } from './BrandName';
 
-import './Components.css';
+import './Components.scss';
 
 export const Brand = ()=>{
     return (

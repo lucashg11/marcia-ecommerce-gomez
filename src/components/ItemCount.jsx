@@ -1,18 +1,17 @@
-import './Components.css';
-import CartLogo from "../assets/images/CartLogo.svg"
+import './Components.scss';
 
 
-export const ItemCount = ({count, stock, onAdd, onRemove})=> {
+export const ItemCount = ({count, stock, upCount, downCount,})=> {
 
 
     return (
         <>
-            <div className="counterContainer">
-                <button className="counterButton" onClick={onRemove}> - </button>
+            <div className="card__counter">
+                <button className="card__counter--button" onClick={downCount}> - </button>
                 <p stock={stock}>{count}</p>
-                <button className="counterButton" onClick={onAdd}> + </button>
-                <button className="cartButton"><img src={CartLogo}alt="" />Agregar al carrito</button>
+                <button className="card__counter--button" onClick={upCount}> + </button>
             </div>
+            <button className="card__button">Agregar al carrito</button>
 
         </>
     )

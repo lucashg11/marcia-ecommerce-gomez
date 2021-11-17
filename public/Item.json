@@ -1,72 +1,74 @@
-[{
-    "id": 1,
-    "title": "Remera manga volados",
-    "description": "REMERA Manga Volados Blanca.",
-    "price": 700,
-    "currency": "$",
-    "picture":"ProductImages/remeraEscoteVBlanca.jpg",
-    "stock": 10
-},
-{
-    "id": 2,
-    "title": "Remera FEMINIST",
-    "description": "Remera FEMINIST Negra.",
-    "price": 850,
-    "currency": "$",
-    "picture":"ProductImages/remeraFeministNegra.jpg",
-    "stock":10
-},
-{
-    "id": 3,
-    "title": "Pantalon Wide leg Jean",
-    "description": "Tajo Trasero",
-    "price": 1400,
-    "currency": "$",
-    "picture":"ProductImages/pantalonJeanAzul.jpg",
-    "stock":10
-},
-{
-    "id": 4,
-    "title": "Pantalon Wide leg Arena",
-    "description": "Pantalon Beige",
-    "price": 1600,
-    "currency": "$",
-    "picture":"ProductImages/pantalonBeige.jpg",
-    "stock":10
-},
-{
-    "id": 5,
-    "title": "Pantalon Wide leg Jean Nieve",
-    "description": "Wide leg Jean Gastado",
-    "price": 1600,
-    "currency": "$",
-    "picture":"ProductImages/pantalonJeanCeleste.jpg",
-    "stock":10
-},
-{
-    "id": 6,
-    "title": "Vestido Amapola Morley",
-    "description": "Vestido Amapola Morley",
-    "price": 1600,
-    "currency": "$",
-    "picture":"ProductImages/vestidoAmapolaMorlet.jpg",
-    "stock":10
-},
-{
-    "id": 7,
-    "title": "Camisero de Lino",
-    "description": "Camisero de Lino Beige",
-    "price": 1600,
-    "currency": "$",
-    "picture":"ProductImages/vestidoCamiseroLino.jpg",
-    "stock":10
-},
-{
-    "id": 8,
-    "title": "Buzo Empathy",
-    "description": "Buzo Empathy marrón estampado",
-    "price": 1600,
-    "currency": "$",
-    "picture":"ProductImages/buzoMarronEmpathy.jpg",
-    "stock":10
-}]
+[
+    {
+        "id": 1,
+        "title": "Remera Blanca",
+        "description": "Con mangas volados",
+        "price": 700,
+        "currency": "$",
+        "picture":"ProductImages/remeraEscoteVBlanca.jpg",
+        "stock": 10
+    },
+    {
+        "id": 2,
+        "title": "Remera Negra",
+        "description": "FEMINIST (Estampado).",
+        "price": 850,
+        "currency": "$",
+        "picture":"ProductImages/remeraFeministNegra.jpg",
+        "stock":10
+    },
+    {
+        "id": 3,
+        "title": "Wide leg Jean",
+        "description": "Con tajo trasero",
+        "price": 1400,
+        "currency": "$",
+        "picture":"ProductImages/pantalonJeanAzul.jpg",
+        "stock":10
+    },
+    {
+        "id": 4,
+        "title": "Wide leg Jean",
+        "description": "Color Arena",
+        "price": 1600,
+        "currency": "$",
+        "picture":"ProductImages/pantalonBeige.jpg",
+        "stock":10
+    },
+    {
+        "id": 5,
+        "title": "Wide leg Jean",
+        "description": "Nieve (gastado)",
+        "price": 1600,
+        "currency": "$",
+        "picture":"ProductImages/pantalonJeanCeleste.jpg",
+        "stock":10
+    },
+    {
+        "id": 6,
+        "title": "Vestido Morley",
+        "description": "Vestido Morley",
+        "price": 1600,
+        "currency": "$",
+        "picture":"ProductImages/vestidoAmapolaMorlet.jpg",
+        "stock":10
+    },
+    {
+        "id": 7,
+        "title": "Camisero de Lino",
+        "description": "Color Beige",
+        "price": 1600,
+        "currency": "$",
+        "picture":"ProductImages/vestidoCamiseroLino.jpg",
+        "stock":10
+    },
+    {
+        "id": 8,
+        "title": "Buzo Marron",
+        "description": "EMPHATY (Estampado).",
+        "price": 1600,
+        "currency": "$",
+        "picture":"ProductImages/buzoMarronEmpathy.jpg",
+        "stock":10
+    }
+]

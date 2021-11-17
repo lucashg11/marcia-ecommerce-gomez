@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
-
+@import '../variables';
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
     height: 5rem;
     background-color: #FFF;
@@ -15,7 +15,7 @@
 .menu {
     display: flex;
     align-content: center;
-    margin-right: 6.25rem;
+    margin-right: 200px;
 }
 
 .menu button {
@@ -72,20 +72,6 @@
     height: 100%;
 }
 
-.counterContainer {
-    width: 12.5rem;
-    height: 1.75rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    align-items: center;
-    line-height: 2px;
-    border: thin solid black;
-    border-radius: .3125rem;
-    font-family: 'Montserrat', sans-serif;
-    background-color:#FFF ;
-    margin-top: 24px;
-}
 
 .counterButton {
     margin: 0 10px;
@@ -122,39 +108,85 @@
 .cartButton:hover{
     background-color: aqua;
     transition: background-color  .09s ease-in ;
-
+    
 }
 
-.itemList{
-    align-items: center;
-    justify-content: center;
-    height:400px;
-    width: 200px;
-    margin: 24px 65px;
-}
-
-
-.itemList h3{
-    margin-bottom: 24px; 
+.card{
+    box-shadow: 0 0 10px 5px $clr-gray;
+    border-radius: $radius;
+    min-width: 28rem;
+    display: flex;
+    cursor: pointer;
     font-family: "Montserrat", sans-serif;
     font-weight: normal ;
+    
+    &__img{
+        width: 14rem;
+        height: 14rem;
+        object-fit: cover;
+        cursor: pointer;
+    }
+    
+    &__body{
+        margin: 1rem;
+        flex-grow: 1;
+    }
+    &__title{
+        line-height: 1.4rem;
+        margin-bottom: .6rem; 
+    }
+    &__description{
+        line-height: 1.2rem;
+    }
+    &__price{
+        font-size: 1.4rem;
+        margin:1rem 0;
+    }
+    
+    &__counter {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 12rem;
+        margin: 0.6rem 0;
+        font-size: 1rem;
+        
+        &--button{
+            width: 1.23rem;
+            height: 1.23rem;
+            border: none;
+            background-color: transparent;
+            font-size: 1rem;
+            &:hover{
+                background-color: #e1cc92;
+            }
+        } 
+    }
+
+    &__button{
+        background-color: transparent;
+        border: none;
+        border-top: 1px solid $clr-gray;  
+        font-size: 1rem;
+        font-weight: bold;
+        width: 100%;
+        padding-top: 1rem;
+        margin-top: 1rem;
+        cursor: pointer;
+        
+        &:hover{
+            color: $clr-primary-dark;
+        }
+    }
+    &:hover {
+        transform: translateY(-0.3rem);
+        transition: transform .08s ease-in;
+    }
 }
 
-.itemList p {
-    font-family: "Montserrat", sans-serif;
-}
 
-.itemImg{
-    margin-bottom: 24px;
-    cursor: pointer;
-    border-radius: 10%;
-    width: 200px;
-    height: 200px;
-}
-.itemImg:hover {
-    transform: scale(1.1);
-    transition: transform .08s ease-in;
-}
+
+
 
 .itemDetailImg {
     border: thin solid red;
@@ -168,4 +200,22 @@
 
 .itemDetailInfo h1{
     margin-bottom: 10px;
+}
+
+@media screen and (min-width:600px) {
+    
+    .card{
+        flex-direction: column;
+        text-align: center;
+        min-width: 14rem;
+
+        &__img {
+            width: 100%;
+            height: 12rem;
+        }
+
+        &__counter{
+            width: 100%;
+        }
+    }
 }

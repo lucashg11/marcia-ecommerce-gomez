@@ -1,14 +1,19 @@
 import { Brand } from './Brand';
 import { Menu } from './Menu';
 import { CartWidget } from './CartWidget';
-import './Components.css';
+import { Link } from 'react-router-dom';
+import './Components.scss';
 
 export const NavBar = ()=>{
     return (
         <div className="navbar">
-            <Brand />
+            <Link to="/">
+                <Brand />
+            </Link>
             <Menu />
-            <CartWidget />
+            <Link to="/carrito">
+                <CartWidget/>
+            </Link>
         </div>
     )
 }

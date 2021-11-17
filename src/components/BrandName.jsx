@@ -1,4 +1,4 @@
-import './Components.css';
+import './Components.scss';
 
 export const BrandName = ()=> {
     return (

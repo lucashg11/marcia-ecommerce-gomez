@@ -1,6 +1,7 @@
-import '../containers/Container.css';
+import '../containers/Container.scss';
 import { useState } from 'react';
 import { ItemCount } from './ItemCount';
+import { Link } from 'react-router-dom';
 
 export const ItemList = ({ item })=> {
     const [count, setCount] = useState(1);
@@ -19,11 +20,16 @@ export const ItemList = ({ item })=> {
         }
     };
     return (
-        <div className="itemList">
-            <img src={ item.picture } alt="" className="itemImg"/>
-            <h3>{ item.title } </h3>
-            <p><span>{item.currency}</span>{ item.price }</p>
-            <ItemCount onAdd={upCount} onRemove={downCount} count={count}/>
+        <div className="card">
+            <Link to={`/item/${item.id}`}>
+                <img src={ item.picture } alt="" className="card__img"/>
+            </Link>
+            <div className="card__body">
+                <h3 className="card__title">{ item.title } </h3>
+                <p className="card__description">{item.description}</p>
+                <p className="card__price"><span>{item.currency}</span>{ item.price }</p>
+                <ItemCount upCount={upCount} downCount={downCount} count={count}/>
+            </div>
         </div>
     )
 }
