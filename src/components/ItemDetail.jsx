@@ -2,22 +2,9 @@ import './Components.scss';
 import '../containers/Container.scss';
 import {ItemCount} from './ItemCount';
 import { useState } from 'react';
-import { useCart } from '../context/cartContext';
 
 export const ItemDetail = ({item})=>{
-    const [addedItem] = useCart();
-    const [quantityToAdd, setQuantityToAdd] = useState(null);
     const [count, setCount] = useState(1);
-    
-    const onAdd = (quantityToAdd)=>{
-        if(quantityToAdd>=1){
-            setQuantityToAdd(quantityToAdd);
-            addedItem(item);
-            item.stock = item.stock-quantityToAdd;
-            item.priceTotal= item.price* item.quantity;
-            console.log(item)
-        } 
-    }
     
     const upCount = ()=> {
         if(count === item.stock){
@@ -41,7 +28,7 @@ export const ItemDetail = ({item})=>{
                 <h1 className="detailCard__title">{ item.title }</h1>
                 <h4 className="detailCard__description">{ item.description }</h4>
                 <p className="detailCard__price"><span>{ item.currency }</span>{ item.price }</p>
-                <ItemCount onAdd={onAdd} upCount={upCount} downCount={downCount} count={count}/>
+                <ItemCount upCount={upCount} downCount={downCount} count={count}/>
             </div>
         </div>
     )
