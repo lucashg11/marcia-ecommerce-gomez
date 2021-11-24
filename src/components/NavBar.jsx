@@ -11,7 +11,7 @@ export const NavBar = ()=>{
                 <Brand />
             </Link>
             <Menu />
-            <Link to="/carrito">
+            <Link to="/cart">
                 <CartWidget/>
             </Link>
         </div>

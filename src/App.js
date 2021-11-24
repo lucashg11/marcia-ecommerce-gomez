@@ -5,9 +5,9 @@ import { ItemListContainer } from './containers/ItemListContainer.jsx';
 import { ItemDetailContainer } from './containers/ItemDetailContainer';
 import { BrowserRouter, Route, Switch  } from 'react-router-dom';
 
-
 function App() {
   return (
+    
     <BrowserRouter>
       <NavBar/>
       <div className="mainContainer">
@@ -15,8 +15,8 @@ function App() {
           <Route exact path="/">
             <ItemListContainer/>
           </Route>
-          <Route exact path="/item/:id">
-            <ItemDetailContainer/>
+          <Route exact path="/item/:itemId">
+            <ItemDetailContainer />
           </Route>
         </Switch>
       </div>

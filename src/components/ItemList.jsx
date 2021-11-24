@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const ItemList = ({ item })=> {
     const [count, setCount] = useState(1);
+    
     const upCount = ()=> {
         if(count === item.stock){
             alert('Alcanzaste el maximo de articulos a pedir')
@@ -19,10 +20,11 @@ export const ItemList = ({ item })=> {
             setCount(count-1)
         }
     };
+
     return (
         <div className="card">
             <Link to={`/item/${item.id}`}>
-                <img src={ item.picture } alt="" className="card__img"/>
+                <img src={ item.image } alt="" className="card__img"/>
             </Link>
             <div className="card__body">
                 <h3 className="card__title">{ item.title } </h3>
