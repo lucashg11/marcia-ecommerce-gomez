@@ -5,12 +5,14 @@ import { ItemListContainer } from './containers/ItemListContainer.jsx';
 import { ItemDetailContainer } from './containers/ItemDetailContainer';
 import { BrowserRouter, Route, Switch  } from 'react-router-dom';
 
+
 function App() {
   return (
     
     <BrowserRouter>
       <NavBar/>
       <div className="mainContainer">
+      
         <Switch>
           <Route exact path="/">
             <ItemListContainer/>
@@ -18,7 +20,10 @@ function App() {
           <Route exact path="/item/:itemId">
             <ItemDetailContainer />
           </Route>
+          <Route exact path="/cart">
+          </Route>
         </Switch>
+      
       </div>
     </BrowserRouter>
   );

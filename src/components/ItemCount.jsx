@@ -1,7 +1,7 @@
 import './Components.scss';
 
 
-export const ItemCount = ({count, stock, upCount, downCount,})=> {
+export const ItemCount = ({count, stock, upCount, downCount, onAdd})=> {
 
 
     return (
@@ -11,7 +11,7 @@ export const ItemCount = ({count, stock, upCount, downCount,})=> {
                 <p stock={stock}>{count}</p>
                 <button className="card__counter--button" onClick={upCount}> + </button>
             </div>
-            <button className="card__button">Agregar al carrito</button>
+            <button className="card__button" onClick={onAdd}>Agregar al carrito</button>
 
         </>
     )

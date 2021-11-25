@@ -16,13 +16,12 @@ export const ItemDetailContainer = ()=>{
         const docData = doc(db, "items", itemId )
         getDoc(docData).then((snapshot)=>{
             if(snapshot.exists()) {
-                console.log(snapshot.data())
+    
                 setItem(snapshot.data())
             }
         })
 }, [itemId]);
-      
-    console.log(item)    
+         
     return(
         <div>
             <ItemDetail item={item}/>         
