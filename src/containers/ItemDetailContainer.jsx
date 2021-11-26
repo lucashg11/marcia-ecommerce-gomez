@@ -8,19 +8,19 @@ import { useParams } from 'react-router-dom';
 
 export const ItemDetailContainer = ()=>{
     const [item, setItem] = useState([])
-    const { itemId } = useParams();
+    const { id } = useParams();
     
     
     useEffect(() => {
         const db = getFirestore();
-        const docData = doc(db, "items", itemId )
+        const docData = doc(db, "items", id )
         getDoc(docData).then((snapshot)=>{
             if(snapshot.exists()) {
     
                 setItem(snapshot.data())
             }
         })
-}, [itemId]);
+}, [id]);
          
     return(
         <div>

@@ -25,7 +25,7 @@
     cursor: pointer;
     background-color: transparent;
     border: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font;
 }
 
 .menu button:hover {
@@ -33,92 +33,54 @@
     font-weight: 600;
 }
 
-.cart {
+.cart__icon {
     cursor: pointer;
     background-color: transparent;
     border: none;
     width: 3rem;
     height: 3rem;
-}
-
-.cart img {
-    width: 65%;
-    height: 65%;
-    color: #0000;
-}
-
-.cart:hover {
-    border-radius: 50%;
-    background-color: #e1cc92;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-}
-
-.brand {
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-}
-
-.logo {
-    width: 4.6875rem;
-    height: 4.6875rem;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
+    & img {
+        width: 65%;
+        height: 65%;
+        color: #0000;
+    }
+    &:hover {
+        border-radius: 50%;
+        background-color: #e1cc92;
+    }
 }
 
 
-.counterButton {
-    margin: 0 10px;
-    cursor: pointer;
-    border: none;
-    font-size: 1.5rem;
-    background-color: transparent;
-}
-
-.cartButton {
-    display: flex;
-    flex-direction: row-reverse ;
-    justify-content: center;
-    align-items: center;
-    border: thin solid black;
-    cursor: pointer;
-    width: 100%;
-    height: 2.1875rem;
-    border-radius: .3125rem;
-    background-color:#e1cc92;
-    color: rgba(0, 0, 0, .5);
-    font-size: 14px;
-    font-weight: 600;
-    margin-top: 10px;
-}
-
-
-.cartButton img {
-    height:80%;
-    width:10%;
-    margin-left: 20px;
-}
-
-.cartButton:hover{
-    background-color: aqua;
-    transition: background-color  .09s ease-in ;
     
+.brand {
+    display: flex;
+    align-items: center;
+    
+    &__name {
+        text-transform: uppercase;
+        font-family: $font;
+        font-weight: 700;
+    }
+    
+    &__logo {
+        width: 4.6875rem;
+        height: 4.6875rem;
+        
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
 
 .card{
+    font-family: $font;
     box-shadow: 0 0 10px 5px $clr-gray;
     border-radius: $radius;
     min-width: 28rem;
     display: flex;
     cursor: pointer;
-    font-family: "Montserrat", sans-serif;
+    font-family: $font;
     font-weight: normal ;
     
     &__img{
@@ -192,6 +154,7 @@
     display: flex;
     border-radius: $radius;
     flex-direction: column;
+    font-family: $font;
     
     &__img {
         width: 100%;
@@ -221,6 +184,8 @@
         margin: 2rem 0;
     }
 
+    
+
     .card__counter{
         font-size: 2rem;
         width: 100%;
@@ -239,15 +204,7 @@
         margin-top: 2rem;
         
     }
-
-
-
 }
-
-.Cart {
-    
-}
-
 
 
 
@@ -269,6 +226,7 @@
     }
 
     .detailCard {
+        font-family: $font;
         box-shadow: 0 0 10px 5px $clr-gray;
         min-width: 56rem;
         flex-direction: row;
@@ -301,6 +259,20 @@
             margin: 2rem 0;
         }
     
+        &__finish {
+            font-family: $font;
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            margin-top: 3.8rem;
+            padding-top: 3.8rem;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            font-size: 1.25rem;
+            color: $clr-primary-dark;
+        }
+
         .card__counter{
             font-size: 1.5rem;
             margin: 1.2rem 0;
@@ -313,13 +285,58 @@
         }
     
         .card__button{
+            font-family: $font;
             font-size: 1.25em;
             padding-top: 2rem;
             margin-top: 2rem;
             
         }
-    
-    
-    
     }
+
+    .cart {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    
+        &__img {
+            width: 9rem;
+            height: 9rem;
+        }
+    
+        &__name{
+            width: 25%;
+        }
+    
+        &__price{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        &__button--remove{
+            border: none;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 7rem;
+            height: 3rem;
+            border-radius: $radius;
+    
+            & img{
+                margin-left: .4rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                
+            }
+            &:hover{
+                color: white;
+                background-color: red;
+                font-weight: 600;
+            }
+            
+        };
+    }
+    
 }

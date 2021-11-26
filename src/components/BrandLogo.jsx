@@ -3,7 +3,7 @@ import './Components.scss';
 
 export const BrandLogo = ()=> {
     return (
-        <div className="logo">
+        <div className="brand__logo">
             <img src={ MainLogo } alt="Marcia" />
         </div>
     )

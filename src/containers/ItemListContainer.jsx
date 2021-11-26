@@ -18,8 +18,8 @@ export const ItemListContainer = ()=>{
 
     
     return(
-        <div className="card__wrapper">
-            {productList?.map(product=><ItemList key={product.itemId}item={product}/>)}
+        <div className="cardContainer">
+            {productList?.map(product=><ItemList key={product.id}item={product}/>)}
         </div>
     )
 }

@@ -3,18 +3,28 @@ import '../containers/Container.scss';
 import {ItemCount} from './ItemCount';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 
 
 export const ItemDetail = ({item})=>{
     const [count, setCount] = useState(1);
-    const [cart, setCart] = useState([]);
-    const [flag, setFlag]= useState(true)
-    
-    const onAdd = (item, count)=>{
-        console.log(item, count)
-        setCart([...cart, item, count]);
-        setFlag(false)
+    const [flag, setFlag]= useState(true);
+    const [ quantity, setQuantity ] = useState(null);
+
+    const { addItem } = useCart();
+
+    const onAdd = (quantityToAdd)=>{
+        quantityToAdd = count;
+        if(quantityToAdd>=1){
+            setQuantity(quantityToAdd);
+            item.quantity = quantityToAdd;
+            addItem(item);
+            item.stock = item.stock - quantityToAdd;
+            item.priceTotal = item.price * quantityToAdd;
+            setFlag(false);
+        }
     }
+
 
     const upCount = ()=> {
         if(count === item.stock){
@@ -37,13 +47,14 @@ export const ItemDetail = ({item})=>{
             <div className="detailCard__body">
                 <h1 className="detailCard__title">{ item.title }</h1>
                 <h4 className="detailCard__description">{ item.description }</h4>
-                <p className="detailCard__price"><span>{ item.currency }</span>{ item.price }</p>
+                <p className="detailCard__price"><span>{ item.currency }</span>{ item.priceTotal ? item.priceTotal : item.price }</p>
                 {!flag? 
                     <Link to="/cart">
-                        <button>Terminar Compra</button>
+                        <button className="detailCard__finish">Terminar Compra</button>
                     </Link>
                     : 
-                    <ItemCount onAdd={()=>onAdd(item,count)} upCount={upCount} downCount={downCount} count={count}/>}
+                    <ItemCount onAdd={onAdd} upCount={upCount} downCount={downCount} count={count}/>
+                }
                 
             </div>
         </div>
