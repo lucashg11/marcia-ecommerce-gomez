@@ -9,6 +9,7 @@ export const ItemListContainer = ()=>{
     
     useEffect(() => {
         const db = getFirestore();
+
         getDocs(collection(db, "items")).then(snapshot =>{
             setProductList(snapshot.docs.map((doc)=>({...doc.data(), id:doc.id})))
         })

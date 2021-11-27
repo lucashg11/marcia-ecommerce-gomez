@@ -1,3 +1,4 @@
+import { isUWP } from "@firebase/util";
 import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
@@ -6,13 +7,13 @@ export const useCart = ()=> useContext(CartContext);
 export const CartProvider = ({children})=>{
     const [cart, setCart] = useState([]);
 
-    const addItem = (item)=>{
+    const addItem = (item, quantity)=>{
         if(!isInCart(item.itemId)){
            setCart([...cart, item])
+           
         }else{
             return ("Tu carrito esta vacio")
         }
-
     }
 
     const removeItem = (itemId)=>{

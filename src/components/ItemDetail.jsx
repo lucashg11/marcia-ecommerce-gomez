@@ -25,7 +25,6 @@ export const ItemDetail = ({item})=>{
         }
     }
 
-
     const upCount = ()=> {
         if(count === item.stock){
             alert('Alcanzaste el maximo de articulos a pedir')

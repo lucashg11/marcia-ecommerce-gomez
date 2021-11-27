@@ -2,10 +2,10 @@ import { CartItem } from "../components/CartItem";
 import { useCart } from "../context/CartContext"
 import "./Container.scss";
 import { Link } from "react-router-dom";
+
 export const CartContainer = ()=>{
     const {cart, clearCart} = useCart();
-    
-
+    console.log(cart.map((carrito)=>carrito.quantity))
 
     return (
         <div className="cartContainer">
@@ -20,6 +20,7 @@ export const CartContainer = ()=>{
                 (<Link to="/"><button className="cart__button--prodpage">Ver productos</button></Link>)
                 }
             </div>
+
         </div>
     
     )
