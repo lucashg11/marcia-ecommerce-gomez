@@ -206,6 +206,11 @@
     }
 }
 
+.checkout {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 @media screen and (min-width:600px) {
@@ -315,6 +320,11 @@
             font-size: 1.2rem;
             font-weight: bold;
         }
+
+        &__priceTotal{
+            text-align: right;
+            margin-right: 230px;
+        }
         
         &__button--remove{
             border: none;
@@ -339,6 +349,46 @@
             }
             
         };
+    }
+
+    .checkout{
+        width: 100%;
+        &__form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            & input{
+                margin: .5rem;
+                padding: 1rem;
+                width: 50%;
+                height: 3rem;
+                border: thin solid $clr-gray;
+                background-color: $clr-gray;
+                border-radius: 0.3rem;
+                box-shadow: 1px 0 5px 1px $clr-gray;
+            }
+        }
+        &__button{
+            margin-left: 40%;
+            border: none;
+            border-radius: $radius;
+            cursor: pointer;
+            background-color: $clr-primary-dark;
+            color: white;
+            width: 10rem;
+            height: 3rem;
+            font-size: 1.2rem;
+            margin-top: 1rem;   
+        }
+
+        &__confirm{
+            text-align: center;
+            & p{
+                font-size: 1.5rem;
+            }
+        }
     }
     
 }

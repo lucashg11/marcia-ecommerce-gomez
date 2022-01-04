@@ -31,6 +31,19 @@
         margin-bottom: 2rem;
     }
 
+    & .cart__button--finish{
+        float: right;
+        border: none;
+        border-radius: $radius;
+        cursor: pointer;
+        background-color: $clr-primary-dark;
+        color: white;
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.2rem;
+        margin-top: 1rem;   
+    }
+
     & .cart__button--clear {
         border: none;
         border-radius: $radius;
